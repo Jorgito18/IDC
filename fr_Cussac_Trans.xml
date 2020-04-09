@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="Cussac_Transform.xsl"?>
 <TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xmlns="http://www.tei-c.org/ns/1.0"
-     xsi:noNamespaceSchemaLocation="document.xsd">
+     xsi:noNamespaceSchemaLocation="document_Trans.xsd">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -40,7 +40,11 @@
                   <w lemma="elle" type="PRO:PER">Elle</w>
                   <w lemma="partir" type="VER:pres">part</w>
                   <w lemma="de" type="PRO:REL">de</w>
-                  <w lemma="cussac" type="NAM">Cussac</w>
+                  <placeName id="en.7" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Cussac" type="NAM">Cussac</w>
+                     </name>
+                  </placeName>
                   <w lemma="en" type="PRO:REL">en</w>
                   <w lemma="haute-vienne" type="NAM">Haute-Vienne</w>
                </phr>
@@ -178,11 +182,7 @@
                   <w lemma="au" type="PRP:det">au</w>
                   <w lemma="village" type="NOM">village</w>
                   <w lemma="le" type="DET:ART">Les</w>
-                  <placeName id="en.2" ref="file:fr_Cussac_coord_entites.xml">
-                     <name>
-                        <w lemma="Liades" type="NPr">Liades</w>
-                     </name>
-                  </placeName>
+                  <w lemma="liades" type="NAM">Liades</w>
                </phr>
                <w lemma="où" type="PRO:REL">où</w>
                <w lemma="vous" type="PRO:PER">vous</w>
@@ -376,7 +376,11 @@
                   <w lemma="de" type="PRO:REL">d'</w>
                   <w lemma="arriver" type="VER:infi">arriver</w>
                   <w lemma="sur" type="PRO:REL">sur</w>
-                  <w lemma="cussac" type="NAM">Cussac</w>
+                  <placeName id="en.0" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Cussac" type="NAM">Cussac</w>
+                     </name>
+                  </placeName>
                </phr>
                <pc force="strong">.</pc>
             </s>
@@ -404,7 +408,11 @@
                   <w lemma="revient" type="VER:pres">revient</w>
                   <w lemma="tranquillement" type="ADV">tranquillement</w>
                   <w lemma="sur" type="PRO:REL">sur</w>
-                  <w lemma="cussac" type="NAM">Cussac</w>
+                  <placeName id="en.0" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Cussac" type="NAM">Cussac</w>
+                     </name>
+                  </placeName>
                </phr>
                <pc force="strong">.</pc>
             </s>

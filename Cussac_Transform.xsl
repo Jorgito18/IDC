@@ -15,42 +15,45 @@
     </xsl:template>
 
     <xsl:template match="//*[@type = 'NAM']">
-        <xsl:for-each select=".">
-            <xsl:variable name="i" select="3"/>
-            <xsl:choose>
-                <xsl:when test=".[@lemma = $geofile[$i]]">
-                    <xsl:element name="placeName">
-                        <xsl:attribute name="id">
-                            <xsl:value-of select="$geofile[$i]/@id"/>
-                        </xsl:attribute>
-                        <xsl:attribute name="ref">file:fr_Cussac_coord_entites.xml</xsl:attribute>
-                        <xsl:element name="name">
-                            <xsl:element name="w">
-                                <xsl:attribute name="lemma">
+        <xsl:variable name="currentW" select="."/>
+        <xsl:for-each select="$currentW">
+            <xsl:variable name="i" select="position()"/>
+            <xsl:for-each select="$i">
+                <xsl:choose>
+                    <xsl:when test="$currentW[@lemma = $geofile[$i]]">
+                        <xsl:element name="placeName">
+                            <xsl:attribute name="id">
+                                <xsl:value-of select="$geofile[$i]/@id"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="ref"
+                                >file:fr_Cussac_coord_entites.xml</xsl:attribute>
+                            <xsl:element name="name">
+                                <xsl:element name="w">
+                                    <xsl:attribute name="lemma">
+                                        <xsl:value-of select="$geofile[$i]"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="type">NAM</xsl:attribute>
                                     <xsl:value-of select="$geofile[$i]"/>
-                                </xsl:attribute>
-                                <xsl:attribute name="type">NAM</xsl:attribute>
-                                <xsl:value-of select="$geofile[$i]"/>
+                                </xsl:element>
                             </xsl:element>
                         </xsl:element>
-                    </xsl:element>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:element name="w">
-                        <xsl:attribute name="lemma">
-                            <xsl:value-of
-                                select="
-                                    translate(.
-                                    , 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-                                    , 'abcdefghijklmnopqrstuvwxyz')"
-                            />
-                        </xsl:attribute>
-                        <xsl:attribute name="type">NAM</xsl:attribute>
-                        <xsl:value-of select="."/>
-                    </xsl:element>
-                </xsl:otherwise>
-            </xsl:choose>
-
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:element name="w">
+                            <xsl:attribute name="lemma">
+                                <xsl:value-of
+                                    select="
+                                        translate($currentW
+                                        , 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+                                        , 'abcdefghijklmnopqrstuvwxyz')"
+                                />
+                            </xsl:attribute>
+                            <xsl:attribute name="type">NAM</xsl:attribute>
+                            <xsl:value-of select="$currentW"/>
+                        </xsl:element>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
