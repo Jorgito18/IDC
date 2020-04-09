@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" 
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+  
+  <xs:element name="geolocalisation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="entite_nom"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+ 
+  <xs:element name="entite_nom">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="LocContent">
+          <xs:attribute name="alt" use="required" type="Elevation"/>
+          <xs:attribute name="id" use="required" type="xs:ID"/>
+          <xs:attribute name="lat" use="required" type="Latitude"/>
+          <xs:attribute name="lng" use="required" type="Longitude"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType> 
+  </xs:element>
+  
+  
+  
+  <xs:simpleType name="LocContent">
+    <xs:restriction base="xs:string">
+      <!--  Attention cette restriction est insuffisante--> 
+      <xs:pattern value="[A-Z](\w+\s*|'?|\-?)+" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="Latitude">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-90.0" />
+      <xs:maxInclusive value="90.0" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="Longitude">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-180.0" />
+      <xs:maxInclusive value="180.0" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="Elevation">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0.0" />
+      <xs:maxInclusive value="10000.0" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  
+</xs:schema>
