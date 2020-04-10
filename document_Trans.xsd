@@ -465,10 +465,6 @@ Exemple de valeurs possibles: 1] motion; 2] information</xs:documentation>
       <xs:documentation>(mot) représente un mot grammatical (pas nécessairement orthographique) [17.1. Linguistic Segment Categories 17.4.2. Lightweight Linguistic Annotation]</xs:documentation>
     </xs:annotation>
     <xs:complexType mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element ref="tei:w"/>
-        <xs:element ref="tei:pc"/>
-      </xs:choice>
       <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
       <xs:attributeGroup ref="tei:tei_att.linguistic.attribute.lemma"/>
       <xs:attribute name="type">

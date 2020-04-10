@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="Cussac_Transform.xsl"?>
 <TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xmlns="http://www.tei-c.org/ns/1.0"
-     xsi:noNamespaceSchemaLocation="document_Trans.xsd">
+     xsi:noNamespaceSchemaLocation="document.xsd">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -40,7 +40,7 @@
                   <w lemma="elle" type="PRO:PER">Elle</w>
                   <w lemma="partir" type="VER:pres">part</w>
                   <w lemma="de" type="PRO:REL">de</w>
-                  <placeName id="en.7" ref="file:fr_Cussac_coord_entites.xml">
+                  <placeName id="en.0" ref="file:fr_Cussac_coord_entites.xml">
                      <name>
                         <w lemma="Cussac" type="NAM">Cussac</w>
                      </name>
@@ -92,7 +92,11 @@
                   <w lemma="usine" type="NOM">usine</w>
                   <w lemma="de" type="PRO:REL">de</w>
                   <w lemma="le" type="DET:ART">la</w>
-                  <w lemma="monnerie" type="NAM">Monnerie</w>
+                  <placeName id="en.1" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Monnerie" type="NAM">Monnerie</w>
+                     </name>
+                  </placeName>
                   <w lemma="et" type="KON">et</w>
                   <w lemma="son" type="DET:POS">son</w>
                   <w lemma="étang" type="NOM">étang</w>
@@ -182,7 +186,11 @@
                   <w lemma="au" type="PRP:det">au</w>
                   <w lemma="village" type="NOM">village</w>
                   <w lemma="le" type="DET:ART">Les</w>
-                  <w lemma="liades" type="NAM">Liades</w>
+                  <placeName id="en.2" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Liades" type="NAM">Liades</w>
+                     </name>
+                  </placeName>
                </phr>
                <w lemma="où" type="PRO:REL">où</w>
                <w lemma="vous" type="PRO:PER">vous</w>
@@ -234,7 +242,11 @@
                   <w lemma="le" type="DET:ART">la</w>
                   <w lemma="forêt" type="NOM">forêt</w>
                   <w lemma="de" type="PRO:REL">de</w>
-                  <w lemma="boubon" type="NAM">Boubon</w>
+                  <placeName id="en.3" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Boubon" type="NAM">Boubon</w>
+                     </name>
+                  </placeName>
                </phr>
                <pc force="strong">.</pc>
             </s>
@@ -297,7 +309,11 @@
                   <w lemma="sentier" type="NOM">sentier</w>
                   <w lemma="jusque" type="PRO:REL">jusqu'</w>
                   <w lemma="à" type="PRO:REL">à</w>
-                  <w lemma="villajou" type="NAM">Villajou</w>
+                  <placeName id="en.4" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Villajou" type="NAM">Villajou</w>
+                     </name>
+                  </placeName>
                </phr>
                <w lemma="où" type="PRO:REL">où</w>
                <w lemma="vous" type="PRO:PER">vous</w>
@@ -327,7 +343,11 @@
                   <w lemma="vous" type="PRO:PER">vous</w>
                   <w lemma="arriver" type="VER:pres">arrivez</w>
                   <w lemma="à" type="PRO:REL">à</w>
-                  <w lemma="puymoroux" type="NAM">Puymoroux</w>
+                  <placeName id="en.5" ref="file:fr_Cussac_coord_entites.xml">
+                     <name>
+                        <w lemma="Puymoroux" type="NAM">Puymoroux</w>
+                     </name>
+                  </placeName>
                </phr>
                <pc force="strong">.</pc>
             </s>
